@@ -281,5 +281,36 @@
   </div>
 </footer>
 
+<!-- EXIT POPUP -->
+<div id="exitPopup" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(4,8,16,.88);align-items:center;justify-content:center;padding:20px">
+  <div style="background:#101f38;border:1px solid rgba(255,200,0,.4);border-radius:16px;max-width:480px;width:100%;padding:36px 32px;text-align:center;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6)">
+    <button onclick="closeExitPopup()" aria-label="Close" style="position:absolute;top:10px;right:16px;background:none;border:none;color:#9aa6bd;font-size:26px;cursor:pointer;line-height:1">&times;</button>
+    <div style="font-size:44px;margin-bottom:8px">&#9888;&#65039;</div>
+    <h3 style="color:#ffc800;font-size:24px;margin-bottom:12px">WAIT &mdash; Before You Go!</h3>
+    <p style="color:#cdd6e6;font-size:15px;margin-bottom:18px">You were one click away from the complete TikTok Shop affiliate system. Get instant access now:</p>
+    <ul style="list-style:none;text-align:left;max-width:360px;margin:0 auto 22px;color:#cdd6e6;font-size:14.5px;padding:0">
+      <li style="padding:5px 0">&#9989; 36-page step-by-step blueprint (18 chapters)</li>
+      <li style="padding:5px 0">&#9989; 30-day action plan included</li>
+      <li style="padding:5px 0">&#9989; 14-day money-back guarantee</li>
+    </ul>
+    <div style="margin-bottom:16px"><span style="font-size:20px;color:#9aa6bd;text-decoration:line-through">$47</span> <span style="font-size:36px;font-weight:800;color:#ffc800">$17</span></div>
+    <!-- WARRIORPLUS_BUY_BUTTON -->
+    <a class="btn" href="#" style="font-size:18px;padding:15px 36px">Get Instant Access &mdash; $17</a>
+    <!-- /WARRIORPLUS_BUY_BUTTON -->
+    <p style="margin-top:16px"><a href="#" onclick="closeExitPopup();return false" style="color:#9aa6bd;font-size:13px;text-decoration:underline">No thanks, I'll skip this</a></p>
+  </div>
+</div>
+<script>
+(function(){
+  var shown=false;
+  function show(){ if(shown) return; shown=true; document.getElementById('exitPopup').style.display='flex'; }
+  window.closeExitPopup=function(){ document.getElementById('exitPopup').style.display='none'; };
+  document.getElementById('exitPopup').addEventListener('click',function(e){ if(e.target===this) closeExitPopup(); });
+  document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) show(); });
+  setTimeout(show,75000);
+})();
+</script>
+<!-- /EXIT POPUP -->
+
 </body>
 </html>
