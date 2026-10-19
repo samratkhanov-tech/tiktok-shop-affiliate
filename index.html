@@ -307,7 +307,7 @@
   window.closeExitPopup=function(){ document.getElementById('exitPopup').style.display='none'; };
   document.getElementById('exitPopup').addEventListener('click',function(e){ if(e.target===this) closeExitPopup(); });
   document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) show(); });
-  setTimeout(show,75000);
+  setTimeout(show,5000);
 })();
 </script>
 <!-- /EXIT POPUP -->
